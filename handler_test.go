@@ -1,4 +1,4 @@
-package tint_test
+package clog_test
 
 import (
 	"bytes"
@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lmittmann/tint"
+	tint "github.com/ayankit/clog"
 )
 
 func Example() {

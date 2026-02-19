@@ -1,4 +1,4 @@
-package tint
+package clog
 
 import "sync"
 

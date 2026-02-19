@@ -1,3 +1,3 @@
-module github.com/lmittmann/tint
+module github.com/ayankit/clog
 
 go 1.21

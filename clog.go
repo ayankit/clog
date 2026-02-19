@@ -31,11 +31,11 @@ func Fatalf(format string, args ...any) {
 	os.Exit(1)
 }
 
-func Init(level slog.Level, logFilePath ...string) error {
+func Init(level Level, logFilePath ...string) error {
 	var handler slog.Handler
 
 	opts := Options{
-		Level: level,
+		Level: level.toSlogLevel(),
 		ReplaceAttr: func(groups []string, a slog.Attr) slog.Attr {
 			if a.Value.Kind() == slog.KindAny {
 				if _, ok := a.Value.Any().(error); ok {

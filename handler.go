@@ -1,6 +1,5 @@
-/*
-Credits: https://github.com/lmittmann/tint/blob/main/handler.go
-*/
+// Credits: https://github.com/lmittmann/tint/blob/main/handler.go
+
 package clog
 
 import (

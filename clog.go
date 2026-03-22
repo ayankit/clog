@@ -10,6 +10,12 @@ import (
 
 var log *slog.Logger
 
+func init() {
+	// Provide a safe default so calling log methods before Init() doesn't panic.
+	// We ignore the error here because initializing just to stdout won't fail.
+	_ = Init(LevelInfo)
+}
+
 func Debug(msg string, args ...any) { log.Debug(msg, args...) }
 func Info(msg string, args ...any)  { log.Info(msg, args...) }
 func Warn(msg string, args ...any)  { log.Warn(msg, args...) }
